@@ -11,10 +11,10 @@ const RestaurantItem = ({ restaurant }) => {
             $ {restaurant.deliveryFee} &#8226; {restaurant.minDeliveryTime}-
             {restaurant.maxDeliveryTime} minutes
           </Text>
-        </View>
 
-        <View style={styles.rating}>
-          <Text>{restaurant.rating}</Text>
+          <View style={styles.rating}>
+            <Text>{restaurant.rating}</Text>
+          </View>
         </View>
       </View>
     </View>
@@ -40,7 +40,10 @@ const styles = StyleSheet.create({
   subtitle: {
     color: "grey",
   },
-  row: {},
+  row: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
   rating: {
     marginLeft: "auto",
     backgroundColor: "lightgray",
@@ -48,6 +51,7 @@ const styles = StyleSheet.create({
     height: 30,
     alignItems: "center",
     justifyContent: "center",
-    borderRadius: 10,
+    borderRadius: 50,
+    marginVertical: 10,
   },
 });
