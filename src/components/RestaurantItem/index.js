@@ -1,8 +1,15 @@
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, Pressable } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 const RestaurantItem = ({ restaurant }) => {
+  const navigation = useNavigation();
+
+  const onPress = () => {
+    navigation.navigate("Restaurant", { id: restaurant.id });
+  };
+
   return (
-    <View style={styles.restaurantContainer}>
+    <Pressable onPress={onPress} style={styles.restaurantContainer}>
       <Image source={{ uri: restaurant.image }} style={styles.image} />
       <View style={styles.row}>
         <View style={styles.container}>
@@ -11,13 +18,12 @@ const RestaurantItem = ({ restaurant }) => {
             $ {restaurant.deliveryFee} &#8226; {restaurant.minDeliveryTime}-
             {restaurant.maxDeliveryTime} minutes
           </Text>
-
-          <View style={styles.rating}>
-            <Text>{restaurant.rating}</Text>
-          </View>
+        </View>
+        <View style={styles.rating}>
+          <Text>{restaurant.rating}</Text>
         </View>
       </View>
-    </View>
+    </Pressable>
   );
 };
 
@@ -34,8 +40,9 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   title: {
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: "bold",
+    marginVertical: 5,
   },
   subtitle: {
     color: "grey",
@@ -52,6 +59,5 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 50,
-    marginVertical: 10,
   },
 });
