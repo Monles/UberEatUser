@@ -5,6 +5,8 @@ import HomeScreen from "./src/screens/HomeScreen";
 import RestaurantDetailsScreen from "./src/screens/RestaurantDetailsScreen";
 import DishDetailsScreen from "./src/screens/DishDetailsScreen";
 import Basket from "./src/screens/Basket";
+import OrderScreen from "./src/screens/OrderScreen";
+import OrderDetails from "./src/components/OrderDetails";
 
 export default function App() {
   return (
@@ -13,6 +15,9 @@ export default function App() {
       {/* <HomeScreen /> */}
       {/* <DishDetailsScreen /> */}
       <Basket />
+      {/* <OrderScreen /> */}
+      {/* <OrderDetails /> */}
+
       <StatusBar style='light' />
     </View>
   );
@@ -24,7 +29,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-    padding: 10,
-    marginVertical: 30,
+    // padding: 10,
+    // marginVertical: 30,
   },
 });
