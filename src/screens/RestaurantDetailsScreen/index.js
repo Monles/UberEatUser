@@ -25,9 +25,9 @@ const RestaurantDetailsPage = () => {
       />
       <Ionicons
         onPress={() => navigation.goBack()}
-        name='arrow-back-circle'
+        name="arrow-back-circle"
         size={45}
-        color='white'
+        color="white"
         style={styles.iconContainer}
       />
     </View>
