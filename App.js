@@ -3,13 +3,18 @@ import { StyleSheet, View } from "react-native";
 import RootNavigator from "./src/navigation";
 
 import { NavigationContainer } from "@react-navigation/native";
+import { Amplify } from "aws-amplify";
+import { withAuthenticator } from "aws-amplify-react-native";
+import config from "./src/aws-exports";
 
-export default function App() {
+Amplify.configure(config);
+
+function App() {
   return (
     <NavigationContainer>
       <RootNavigator />
 
-      <StatusBar style='light' />
+      <StatusBar style="light" />
     </NavigationContainer>
   );
 }
