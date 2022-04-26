@@ -29,27 +29,21 @@ const HomeTabs = () => {
         name="Home"
         component={HomeStackNavigator}
         options={{
-          tabBarIcon: ({ color }) => (
-            <Foundation name="home" size={24} color={color} />
-          ),
+          tabBarIcon: ({ color }) => <Foundation name="home" size={24} color={color} />,
         }}
       />
       <Tab.Screen
         name="Orders"
         component={OrderStackNavigator}
         options={{
-          tabBarIcon: ({ color }) => (
-            <MaterialIcons name="list-alt" size={24} color={color} />
-          ),
+          tabBarIcon: ({ color }) => <MaterialIcons name="list-alt" size={24} color={color} />,
         }}
       />
       <Tab.Screen
         name="Profile"
         component={OrdersScreen}
         options={{
-          tabBarIcon: ({ color }) => (
-            <FontAwesome5 name="user-alt" size={24} color={color} />
-          ),
+          tabBarIcon: ({ color }) => <FontAwesome5 name="user-alt" size={24} color={color} />,
         }}
       />
     </Tab.Navigator>
